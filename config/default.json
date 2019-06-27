@@ -1,0 +1,3 @@
+{
+    "mongoURI":"mongodb+srv://minh:minhminh@project-lqmnk.mongodb.net/bookface?retryWrites=true&w=majority"
+}
