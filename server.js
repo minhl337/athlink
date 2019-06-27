@@ -4,6 +4,9 @@ const connectDB=require('./config/db');
 const app = express();
 connectDB();
 
+//bodyParser
+app.use(express.json({extended:false}));
+
 app.get("/",(req,res)=>{
     res.send("sup")
 });
