@@ -10,8 +10,8 @@ const {check,validationResult}=require('express-validator')
 const User = require('../../models/User')
 
 
-//@route GET api/auth
-//@desc test route
+//GET api/auth
+//test route
 //access public
 router.get('/',auth,async(req,res)=>{
     try{
@@ -23,8 +23,8 @@ router.get('/',auth,async(req,res)=>{
     }
 });
 
-//@route POST api/auth
-//@desc Authenticate user and get token
+//POST api/auth
+//Authenticate user and get token
 //access public
 router.post('/',[
     check('email',"Please enter an Email").isEmail(),
