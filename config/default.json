@@ -1,4 +1,6 @@
 {
     "mongoURI":"mongodb+srv://minh:minhminh@project-lqmnk.mongodb.net/bookface?retryWrites=true&w=majority",
-    "jwtSecret": "bigbeans"
+    "jwtSecret": "bigbeans",
+    "githubClientId":"0affddd6ddaac5a2b20a",
+    "githubSecret":"014b31ab73cdb1bde9db3cb48c8441179dfd39fc"
 }
