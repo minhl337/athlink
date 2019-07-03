@@ -19,7 +19,7 @@ const Login = () => {
     
 
     return (
-        <Fragment>
+        <section className="container">
             <h1 className="large text-primary">
                 Log In
             </h1>
@@ -49,7 +49,7 @@ const Login = () => {
             <p className="my-1">
                 Don't have an account? <Link to='/register'>Register</Link>
             </p>
-        </Fragment>
+            </section>
     )
 }
 

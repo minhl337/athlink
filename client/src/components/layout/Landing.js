@@ -8,7 +8,7 @@ const Landing = () => {
             <div className="landing-inner">
                 <h1 className="x-large">Athlink</h1>
                 <p className="lead">
-                Create athelete profiles, share results and get input from
+                Create your athelete profile, share results and get input from
                 other top athletes
                 </p>
                 <div className="buttons">
