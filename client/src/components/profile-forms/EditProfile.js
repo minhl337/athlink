@@ -64,7 +64,7 @@ const EditProfile = ({ profile:{profile,loading},createProfile, history, getCurr
 
     const onSubmit=e=>{
         e.preventDefault();
-        createProfile(formData, history);
+        createProfile(formData, history,true);
     }
 
     return (
@@ -73,8 +73,7 @@ const EditProfile = ({ profile:{profile,loading},createProfile, history, getCurr
         Create Your Profile
       </h1>
       <p className="lead">
-        <i className="fas fa-user"></i> Let's get some information to make your
-        profile stand out
+        <i className="fas fa-user"></i> Let's get some information about you
       </p>
       <small>* = required fields</small>
       <form className="form" onSubmit={e=>onSubmit(e)}>
@@ -172,19 +171,19 @@ const EditProfile = ({ profile:{profile,loading},createProfile, history, getCurr
 
         
         <input type="submit" className="btn btn-primary my-1" />
-        <a className="btn btn-light my-1" href="dashboard.html">Go Back</a>
+        <Link className="btn btn-light my-1" to="/dashboard">Go Back</Link>
       </form> 
       </div>
     )
 };
 
-CreateProfile.propTypes = {
+EditProfile.propTypes = {
     createProfile:PropTypes.func.isRequired,
     profile:PropTypes.object.isRequired,
     getCurrentProfile:PropTypes.func.isRequired
 };
 
-const mapStateToProp=state=({
+const mapStateToProps=state=>({
     profile:state.profile
 })
 
