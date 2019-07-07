@@ -75,14 +75,12 @@ export const addExperience=(formData,history)=>async dispatch=>{
 
         history.push('/dashboard');
 
-
     }catch(err){
         const errors=err.response.data.errors;
 
         if(errors){
             errors.forEach(error=>dispatch(setAlert(error.msg,'danger')));
         }
-
 
         dispatch({
             type:PROFILE_ERROR,
@@ -110,14 +108,12 @@ export const addEducation=(formData,history)=>async dispatch=>{
 
         history.push('/dashboard');
 
-
     }catch(err){
         const errors=err.response.data.errors;
 
         if(errors){
             errors.forEach(error=>dispatch(setAlert(error.msg,'danger')));
         }
-
 
         dispatch({
             type:PROFILE_ERROR,
