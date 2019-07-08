@@ -23,39 +23,41 @@ const EditProfile = ({ profile:{profile,loading},createProfile, history, getCurr
 
     const [displaySocialInputs, toggleSocialInputs]=useState(false);
 
-    useEffect(()=>{
-        getCurrentProfile();
-
-        setFormData({
-            company: loading || !profile.company ? '' : profile.company,
-            website: loading || !profile.website ? '' : profile.website,
-            location: loading || !profile.location ? '' : profile.location,
-            status: loading || !profile.status ? '' : profile.status,
-            skills: loading || !profile.skills ? '' : profile.skills,
-            githubusername: loading || !profile.githubusername ? '' : profile.githubusername,
-            bio: loading || !profile.bio ? '' : profile.bio,
-            twitter: loading || !profile.social ? '' : profile.social.twitter,
-            facebook: loading || !profile.social ? '' : profile.social.facebook,
-            linkedin: loading || !profile.social ? '' : profile.social.linkedin,
-            youtube: loading || !profile.social ? '' : profile.social.youtube,
-            instagram: loading || !profile.social ? '' : profile.social.instagram
-        });
-    },[loading]);
-
-    const{
-        company,
-        website,
-        location,
-        status,
-        skills,
-        githubusername,
-        bio,
-        twitter,
-        facebook,
-        linkedin,
-        youtube,
-        instagram
-    }=formData;
+    useEffect(() => {
+      getCurrentProfile();
+  
+      setFormData({
+        company: loading || !profile.company ? '' : profile.company,
+        website: loading || !profile.website ? '' : profile.website,
+        location: loading || !profile.location ? '' : profile.location,
+        status: loading || !profile.status ? '' : profile.status,
+        skills: loading || !profile.skills ? '' : profile.skills.join(','),
+        githubusername:
+          loading || !profile.githubusername ? '' : profile.githubusername,
+        bio: loading || !profile.bio ? '' : profile.bio,
+        twitter: loading || !profile.social ? '' : profile.social.twitter,
+        facebook: loading || !profile.social ? '' : profile.social.facebook,
+        linkedin: loading || !profile.social ? '' : profile.social.linkedin,
+        youtube: loading || !profile.social ? '' : profile.social.youtube,
+        instagram: loading || !profile.social ? '' : profile.social.instagram
+      });
+    }, [loading, getCurrentProfile]);
+  
+    const {
+      company,
+      website,
+      location,
+      status,
+      skills,
+      githubusername,
+      bio,
+      twitter,
+      facebook,
+      linkedin,
+      youtube,
+      instagram
+    } = formData;
+  
 
     const onChange=e=>setFormData({
         ...formData,
@@ -70,7 +72,7 @@ const EditProfile = ({ profile:{profile,loading},createProfile, history, getCurr
     return (
         <div className="container">
            <h1 className="large text-primary">
-        Create Your Profile
+        Edit Profile
       </h1>
       <p className="lead">
         <i className="fas fa-user"></i> Let's get some information about you
@@ -90,7 +92,7 @@ const EditProfile = ({ profile:{profile,loading},createProfile, history, getCurr
             <option value="Other">Other</option>
           </select>
           <small className="form-text"
-            >Give us an idea of activities</small
+            >What best describes you</small
           >
         </div>
         <div className="form-group">
@@ -139,7 +141,7 @@ const EditProfile = ({ profile:{profile,loading},createProfile, history, getCurr
           <button type="button" onClick={()=> toggleSocialInputs(!displaySocialInputs)} className="btn btn-light">
             Add Social Network Links
           </button>
-          <span>Optional</span>
+          <span>Optional <br></br><small className="form-text">*Must use https://www.WEBSITE.com/YOURNAME format*</small></span>
         </div>
 
         {displaySocialInputs && <Fragment>

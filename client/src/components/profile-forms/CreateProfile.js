@@ -72,7 +72,7 @@ const CreateProfile = ({ createProfile, history}) => {
             <option value="Other">Other</option>
           </select>
           <small className="form-text"
-            >Give us an idea of activities</small
+            >What best describes you</small
           >
         </div>
         <div className="form-group">
@@ -121,7 +121,8 @@ const CreateProfile = ({ createProfile, history}) => {
           <button type="button" onClick={()=> toggleSocialInputs(!displaySocialInputs)} className="btn btn-light">
             Add Social Network Links
           </button>
-          <span>Optional</span>
+          <span>Optional</span><br></br>
+          <span>Optional <br></br><small className="form-text">*Must use https://www.WEBSITE.com/YOURNAME format*</small></span>
         </div>
 
         {displaySocialInputs && <Fragment>
