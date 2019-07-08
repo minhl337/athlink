@@ -35,7 +35,7 @@ const Dashboard = ({
 
                 <div className="my-2">
                     <button className="btn btn-danger" onClick={()=>deleteAccount()}>
-                        <i className='fas fa-user-minus'></i>DELETE ACCOUNT
+                        <i className='fas fa-user-minus'></i> DELETE ACCOUNT
                     </button>
                 </div>
             </Fragment> : 
