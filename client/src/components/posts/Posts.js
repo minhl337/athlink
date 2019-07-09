@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {getPosts} from '../../actions/post'
 import Spinner from '../layout/Spinner'
+import PostItem from './PostItem'
+import PostForm from './PostForm';
 
 const Posts = ({getPosts,post:{posts,loading}}) => {
     useEffect(()=>{
@@ -10,9 +12,20 @@ const Posts = ({getPosts,post:{posts,loading}}) => {
     },[getPosts])
 
     return (
-        <div>
-            
-        </div>
+        loading ? <Spinner/> : (
+            <div className='container'>
+                <h1 className='large text-primary'>Posts</h1>
+                <p className='lead'>
+                    Your community forum
+                </p>
+                <PostForm/>
+                <div className='posts'>
+                    {posts.map(post=>(
+                        <PostItem key={post.id} post={post}/>
+                    ))}
+                </div>
+            </div>
+        )
     )
 }
 
