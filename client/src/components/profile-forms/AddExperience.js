@@ -26,12 +26,13 @@ const AddExperience = ({ addExperience, history }) => {
 
   return (
     <div className="container">
-      <h1 className="large text-primary">Add An Experience</h1>
+      <h1 className="large text-primary">Add Qualifications</h1>
       <p className="lead">
-        <i className="fas fa-code-branch" /> Add any developer/programming
-        positions that you have had in the past
+        <i className="fas fa-code-branch" /> Add any experience, qualifications, or certifications
       </p>
       <small>* = required field</small>
+      <br></br>
+      <small>fill out a form for each qualification</small>
       <form
         className="form"
         onSubmit={e => {
@@ -42,7 +43,7 @@ const AddExperience = ({ addExperience, history }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="* Job Title"
+            placeholder="* Experience, Qualifications, Certifications"
             name="title"
             value={title}
             onChange={e => onChange(e)}
@@ -52,7 +53,7 @@ const AddExperience = ({ addExperience, history }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="* Company"
+            placeholder="* Company or Organization"
             name="company"
             value={company}
             onChange={e => onChange(e)}
@@ -69,7 +70,7 @@ const AddExperience = ({ addExperience, history }) => {
           />
         </div>
         <div className="form-group">
-          <h4>From Date</h4>
+          <h4>Date</h4>
           <input
             type="date"
             name="from"
@@ -89,7 +90,7 @@ const AddExperience = ({ addExperience, history }) => {
                 toggleDisabled(!toDateDisabled);
               }}
             />{" "}
-            Current Job
+            Current Job or Single Date
           </p>
         </div>
         <div className="form-group">
@@ -108,7 +109,7 @@ const AddExperience = ({ addExperience, history }) => {
             name="description"
             cols="30"
             rows="5"
-            placeholder="Job Description"
+            placeholder="Description"
             value={description}
             onChange={e => onChange(e)}
           />

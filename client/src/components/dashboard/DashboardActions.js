@@ -9,10 +9,10 @@ const DashboardActions = () => {
           <i className="fas fa-user-circle text-primary"></i> Edit Profile
         </Link>
         <Link to="/add-experience" className="btn">
-          <i className="fab fa-black-tie text-primary"></i> Add Experience
+          <i className="fab fa-black-tie text-primary"></i> Add Qualifications
         </Link>
         <Link to="/add-education" className="btn">
-          <i className="fas fa-graduation-cap text-primary"></i> Add Education
+          <i className="fas fa-trophy text-primary"></i> Add Results
         </Link>
       </div>
         </div>

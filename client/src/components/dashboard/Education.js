@@ -23,13 +23,13 @@ const Education = ({education,deleteEducation}) => {
 
     return (
         <div>
-            <h2 className="my-2">Education Credentials</h2>
+            <h2 className="my-2">Event Results</h2>
             <table className="table">
                 <thead>
                     <tr>
-                        <th>School</th>
-                        <th className="hide-sm">Degree</th>
-                        <th className="hide-sm">Years</th>
+                        <th>Event</th>
+                        <th className="hide-sm">Result</th>
+                        <th className="hide-sm">Year(s)</th>
                         <th></th>
                     </tr>
                 </thead>

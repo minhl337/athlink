@@ -26,11 +26,13 @@ const AddEducation = ({ addEducation, history }) => {
 
   return (
     <div className="container">
-      <h1 className="large text-primary">Add Your Education</h1>
+      <h1 className="large text-primary">Add Event Results</h1>
       <p className="lead">
         <i className="fas fa-code-branch" /> Add any school or bootcamp that you have attended.
       </p>
       <small>* = required field</small>
+      <br></br>
+      <small>fill out a form for each qualification</small>
       <form
         className="form"
         onSubmit={e => {
@@ -41,7 +43,7 @@ const AddEducation = ({ addEducation, history }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="* School"
+            placeholder="* Event"
             name="school"
             value={school}
             onChange={e => onChange(e)}
@@ -51,7 +53,7 @@ const AddEducation = ({ addEducation, history }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="* Degree"
+            placeholder="* Placement"
             name="degree"
             value={degree}
             onChange={e => onChange(e)}
@@ -61,14 +63,14 @@ const AddEducation = ({ addEducation, history }) => {
         <div className="form-group">
           <input
             type="text"
-            placeholder="Field of Study"
+            placeholder="Type of Event"
             value={fieldofstudy}
             onChange={e => onChange(e)}
             name="fieldofstudy"
           />
         </div>
         <div className="form-group">
-          <h4>From Date</h4>
+          <h4>Date</h4>
           <input
             type="date"
             name="from"
@@ -88,7 +90,7 @@ const AddEducation = ({ addEducation, history }) => {
                 toggleDisabled(!toDateDisabled);
               }}
             />{" "}
-            Current School
+            Event Only Lasted One Day
           </p>
         </div>
         <div className="form-group">
@@ -107,7 +109,7 @@ const AddEducation = ({ addEducation, history }) => {
             name="description"
             cols="30"
             rows="5"
-            placeholder="Program Description"
+            placeholder="Event Description"
             value={description}
             onChange={e => onChange(e)}
           />

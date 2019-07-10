@@ -14,11 +14,11 @@ const CreateProfile = ({ createProfile, history}) => {
         skills:'',
         githubusername:'',
         bio:'',
-        twitter:'',
-        facebook:'',
+        twitter:'https://twitter.com/YOURACCOUNT',
+        facebook:'https://www.facebook.com/YOURACCOUNT',
         linkedin:'',
-        youtube:'',
-        instagram:'' 
+        youtube:'https://www.youtube.com/user/YOURACCOUNT',
+        instagram:'https://www.instagram.com/YOURACCOUNT' 
     });
 
     const [displaySocialInputs, toggleSocialInputs]=useState(false);
@@ -122,7 +122,7 @@ const CreateProfile = ({ createProfile, history}) => {
             Add Social Network Links
           </button>
           <span>Optional</span><br></br>
-          <span>Optional <br></br><small className="form-text">*Must use https://www.WEBSITE.com/YOURNAME format*</small></span>
+          <small className="form-text">*Must use https://www.WEBSITE.com/YOURNAME format*</small>
         </div>
 
         {displaySocialInputs && <Fragment>
