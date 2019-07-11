@@ -21,6 +21,12 @@ This is an app that I built to learn and showcase my understand of the MERN stac
 **With qualifications
 **Events with placements
 
+###Example
+* Item 1
+* Item 2
+  * Sub Item 1
+  * Sub Item 2
+
 Everything is created with full authentication/authorization and is responsive giving the user alerts on their actions.
 
 The app is built to maintain full aesthetics and functionality  on desktop or mobile.
