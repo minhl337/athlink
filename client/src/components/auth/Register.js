@@ -56,6 +56,7 @@ const Register = ({setAlert,register,isAuthenticated}) => {
                     value={email}
                     onChange={e=>onChange(e)}
                     />
+                    <small className="form-text">Use a Gravatar Enable Email for Profile Picture</small>
                 </div>
                 <div className="form-group">
                 <input 
