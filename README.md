@@ -17,10 +17,10 @@ You can:
 * Like a post
 * Delete your post/comment
 * Edit your Profile
- * With qualifications
- * Events with placements
+  * With qualifications
+  * Events with placements
 
-Everything is created with full authentication/authorization and is responsive giving the user alerts on their actions.
+Everything is created with full authentication/authorization and is responsive giving the user alerts on their actions. Full CRUD is availible on all items.
 
 The app is built to maintain full aesthetics and functionality  on desktop or mobile.
 
