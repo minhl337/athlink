@@ -8,6 +8,7 @@ Welcome to Athlink, the social network for the physically active.
 This is an app that I built to learn and showcase my understand of the MERN stack. 
 
 ##You can:
+
 *Create an account (with Gravatar enabled email)
 *Login
 *View a list of users
