@@ -8,28 +8,17 @@ Welcome to Athlink, the social network for the physically active.
 This is an app that I built to learn and showcase my understand of the MERN stack. 
 
 You can:
-
-Create an account (with Gravatar enabled email)
-
-Login
-
-View a list of users
-
-See individual user in more detail
-
-Create a post
-
-Comment on posts
-
-Like a post
-
-Delete your post/comment
-
-Edit your Profile
-
-With qualifications
-
-Events with placements
+*Create an account (with Gravatar enabled email)
+*Login
+*View a list of users
+*See individual user in more detail
+*Create a post
+*Comment on posts
+*Like a post
+*Delete your post/comment
+*Edit your Profile
+**With qualifications
+**Events with placements
 
 Everything is created with full authentication/authorization and is responsive giving the user alerts on their actions.
 
